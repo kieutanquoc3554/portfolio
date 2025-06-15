@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "education": "Học vấn",
+    "skills": "Kỹ năng",
+    "project": "Dự án",
+    "contact": "Liên hệ",
+    "download": "Tải CV ↓"
+  },
+  "home": {
+    "greeting": "Xin chào, tôi tên",
+    "name": "Kiều Tấn Quốc",
+    "position": "Tôi là một lập trình viên Fullstack",
+    "summary": "Tôi là một lập trình viên web fullstack đầy khát vọng, có kinh nghiệm thực tế trong việc xây dựng ứng dụng web có thể mở rộng bằng React.js và Node.js. Thành thạo cả frontend và backend, có kỹ năng giải quyết vấn đề tốt và tinh thần học hỏi chủ động. Tôi mong muốn được đóng góp vào các dự án thực tế trong một môi trường làm việc năng động và hợp tác.",
+    "hire": "Thuê tôi",
+    "contact": "Liên hệ"
+  },
+  "about": {
+    "title": "Giới thiệu bản thân",
+    "education": "Tôi vừa tốt nghiệp ngành Kỹ thuật phần mềm và đã hoàn thành kỳ thực tập tại VNPT, nơi tôi phát triển ứng dụng bán hàng (POS) bằng React và Node.js.",
+    "project": "Tôi cũng đã xây dựng một dự án thương mại điện tử cho đặc sản Cà Mau, áp dụng các kỹ năng fullstack như API RESTful, MongoDB và thiết kế giao diện.",
+    "goal": "Tôi đam mê giao diện sạch sẽ, hiệu năng tốt và luôn học hỏi. Mục tiêu của tôi là trở thành lập trình viên fullstack chuyên nghiệp với tư duy sản phẩm mạnh mẽ."
+  },
+  "education": {
+    "title": "Học vấn",
+    "ctu": {
+      "title": "Đại học Cần Thơ",
+      "subtitle": "Kỹ sư chuyên ngành Kỹ thuật phần mềm",
+      "description": "Tốt nghiệp với định hướng phát triển web fullstack và nhiều dự án phần mềm thực tế."
+    },
+    "vnpt": {
+      "title": "Thực tập tại VNPT Cần Thơ",
+      "subtitle": "Thực tập sinh Frontend + Backend",
+      "description": "Xây dựng ứng dụng bán hàng POS bằng React, Node.js và MongoDB dưới sự hướng dẫn của công ty."
+    }
+  },
+  "skills": {
+    "title": "Kỹ năng",
+    "frontend": {
+      "title": "Giao diện người dùng (Frontend)",
+      "items": ["ReactJS", "Redux", "Tailwind CSS"]
+    },
+    "backend": {
+      "title": "Lập trình phía máy chủ (Backend)",
+      "items": ["Node.js", "Express.js", "REST API"]
+    },
+    "database": {
+      "title": "Cơ sở dữ liệu",
+      "items": ["MongoDB", "MySQL", "Supabase"]
+    },
+    "languages": {
+      "title": "Ngôn ngữ lập trình",
+      "items": ["JavaScript (ES6+)", "TypeScript", "Java"]
+    },
+    "tools": {
+      "title": "Công cụ & Nền tảng",
+      "items": ["Git", "Vercel", "Netlify", "Figma", "Axios", "Postman"]
+    }
+  },
+  "projects": {
+    "title": "Dự án",
+    "live": "Xem thử",
+    "ecom": {
+      "title": "Website thương mại điện tử - Kinh doanh đặc sản tỉnh Cà Mau",
+      "description": "Một website mua sắm full-stack cho đặc sản địa phương. Bao gồm đăng nhập, quản trị viên, thanh toán và chatbot.",
+      "tech": ["React", "Node.js", "MongoDB"]
+    },
+    "pos": {
+      "title": "POS Coffee (VNPT)",
+      "description": "Ứng dụng mô phỏng bán hàng được xây dựng trong quá trình thực tập. Bao gồm quản lý kho, luồng đơn hàng và giao diện người dùng.",
+      "tech": ["React", "Express", "MongoDB"]
+    }
+  },
+  "contact": {
+    "title": "Thông tin liên hệ",
+    "email": {
+      "label": "Email",
+      "value": "kieutanquoc2002@gmail.com"
+    },
+    "phone": {
+      "label": "Điện thoại",
+      "value": "0949 566 841"
+    },
+    "github": {
+      "label": "GitHub",
+      "value": "github.com/kieutanquoc3554"
+    },
+    "portfolio": {
+      "label": "Trang cá nhân",
+      "value": "kieutanquoc.id.vn"
+    }
+  }
+}

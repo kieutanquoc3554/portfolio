@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "education": "Education",
+    "skills": "Skills",
+    "project": "Project",
+    "contact": "Contact",
+    "download": "Download CV ↓"
+  },
+  "home": {
+    "greeting": "Hello, I'm",
+    "name": "Kieu Tan Quoc",
+    "position": "And I'm a Fullstack Developer",
+    "summary": "Aspiring full-stack web developer with hands-on experience in building scalable web applications using React.js and Node.js. Proficient in both frontend and backend development, with strong problem-solving skills and a proactive learning mindset. Seeking to contribute to real-world projects in a dynamic and collaborative team environment.",
+    "hire": "Hire Me",
+    "contact": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "education": "I recently graduated with a major in Software Engineering and have completed a practical internship at VNPT, where I developed a Point of Sale app using React and Node.js.",
+    "project": "I also built an e-commerce project for specialty products in Cà Mau, applying fullstack skills including RESTful APIs, MongoDB, and UI design.",
+    "goal": "I'm passionate about clean UI, performance, and continuous learning. I aim to become a professional fullstack developer with strong product thinking."
+  },
+  "education": {
+    "title": "Education",
+    "ctu": {
+      "title": "Can Tho University",
+      "subtitle": "Bachelor of Software Engineering",
+      "description": "Graduated with strong focus on fullstack web development and real-world software projects."
+    },
+    "vnpt": {
+      "title": "Internship at VNPT Can Tho",
+      "subtitle": "Frontend + Backend Intern",
+      "description": "Worked on POS Coffee app using React, Node.js, and MongoDB with guidance from company mentors."
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": {
+      "title": "Frontend",
+      "items": ["ReactJS", "Redux", "Tailwind CSS"]
+    },
+    "backend": {
+      "title": "Backend",
+      "items": ["Node.js", "Express.js", "REST API"]
+    },
+    "database": {
+      "title": "Database",
+      "items": ["MongoDB", "MySQL", "Supabase"]
+    },
+    "languages": {
+      "title": "Programming Languages",
+      "items": ["JavaScript (ES6+)", "TypeScript", "Java"]
+    },
+    "tools": {
+      "title": "Tools & Platforms",
+      "items": ["Git", "Vercel", "Netlify", "Figma", "Axios", "Postman"]
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "live": "Live Demo",
+    "ecom": {
+      "title": "E-commerce Cà Mau",
+      "description": "A full-stack shopping site for local specialties. Includes user auth, admin dashboard, payment, and chatbot.",
+      "tech": ["React", "Node.js", "MongoDB"]
+    },
+    "pos": {
+      "title": "POS Coffee (VNPT)",
+      "description": "A point-of-sale app simulation built during internship. Includes inventory, order flow, and UI simulation.",
+      "tech": ["React", "Express", "MongoDB"]
+    }
+  },
+  "contact": {
+    "title": "Contact Information",
+    "email": {
+      "label": "Email",
+      "value": "kieutanquoc2002@gmail.com"
+    },
+    "phone": {
+      "label": "Phone",
+      "value": "0949 566 841"
+    },
+    "github": {
+      "label": "GitHub",
+      "value": "github.com/kieutanquoc3554"
+    },
+    "portfolio": {
+      "label": "Portfolio",
+      "value": "kieutanquoc.id.vn"
+    }
+  }
+}
