@@ -4,13 +4,19 @@ import Summary from "./Summary";
 
 const Introduce = () => {
   return (
-    <section id="home" className="w-full bg-[#04152d] px-6 py-20">
-      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
-        <div className="max-w-xl">
+    <section
+      id="home"
+      className="w-full bg-gradient-to-tr from-[#0f172a] via-[#1e293b] to-[#1e3a5f] px-6 py-24"
+    >
+      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+        <div className="max-w-xl text-white">
           <Summary />
           <Contact />
         </div>
-        <Avatar />
+        <div className="relative w-64 h-64">
+          <div className="absolute inset-0 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <Avatar />
+        </div>
       </div>
     </section>
   );

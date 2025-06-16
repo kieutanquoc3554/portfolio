@@ -1,4 +1,3 @@
-// components/Education.jsx - Timeline with Dots + Animation
 import { FaGraduationCap } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -33,29 +32,38 @@ const Education = () => {
   }, []);
 
   return (
-    <section id="education" className="px-6 py-20 max-w-4xl mx-auto">
-      <h2 className="text-3xl font-bold mb-10 text-cyan-400 text-center">
+    <section
+      id="education"
+      className="w-full bg-gradient-to-tr from-[#0f172a] via-[#1e293b] to-[#1e3a5f] px-6 py-24"
+    >
+      <h2 className="text-4xl font-bold mb-14 text-amber-400 text-center tracking-wide">
         {t("education.title")}
       </h2>
-      <div className="relative border-l-2 border-cyan-500 pl-6">
+
+      <div className="relative border-l-2 border-amber-500/40 pl-6 max-w-4xl mx-auto">
         {educationData.map((edu, index) => (
           <div
             key={index}
-            className={`mb-10 relative transition-all duration-700 delay-[${
-              index * 150
-            }ms] transform ${
+            className={`mb-14 relative transition-all duration-700 ease-in-out transform ${
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="absolute -left-[14px] top-1 w-4 h-4 bg-cyan-400 rounded-full border-2 border-[#04152d] shadow-md flex items-center justify-center">
+            {/* Dot */}
+            <div className="absolute -left-[18px] top-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-[#1e293b] shadow-lg flex items-center justify-center">
               <FaGraduationCap className="text-[10px] text-white" />
             </div>
-            <span className="text-sm text-gray-400 ml-3">{edu.time}</span>
-            <h3 className="text-lg font-semibold text-white mt-1">
+
+            {/* Time */}
+            <span className="text-base text-gray-400">{edu.time}</span>
+
+            {/* Titles */}
+            <h3 className="text-2xl font-semibold text-white mt-1">
               {edu.title}
             </h3>
-            <h4 className="text-sm text-cyan-300 mb-1">{edu.subtitle}</h4>
-            <p className="text-sm text-gray-300 leading-relaxed">
+            <h4 className="text-lg text-amber-300 mb-2">{edu.subtitle}</h4>
+
+            {/* Description */}
+            <p className="text-base text-slate-300 leading-relaxed">
               {edu.description}
             </p>
           </div>

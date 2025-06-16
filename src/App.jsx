@@ -30,7 +30,7 @@ export default function App() {
       <Skills />
       <Project />
       <Information />
-      <footer className="text-center text-xs text-gray-500 py-4">
+      <footer className="text-center text-xs text-gray-500 py-4 bg-gradient-to-t from-[#0f172a] to-[#1e293b]">
         © 2025 Kiều Tấn Quốc
       </footer>
     </div>

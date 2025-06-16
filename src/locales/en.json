@@ -66,10 +66,10 @@
       "description": "A full-stack shopping site for local specialties. Includes user auth, admin dashboard, payment, and chatbot.",
       "tech": ["React", "Node.js", "MongoDB"]
     },
-    "pos": {
-      "title": "POS Coffee (VNPT)",
-      "description": "A point-of-sale app simulation built during internship. Includes inventory, order flow, and UI simulation.",
-      "tech": ["React", "Express", "MongoDB"]
+    "kimdung": {
+      "title": "Construction Materials Management System - Kim Dung",
+      "description": "A store management system including product, inventory, order management, and a responsive admin interface. Focused on interior and building material categories.",
+      "tech": ["React", "Node.js", "MySQL"]
     }
   },
   "contact": {

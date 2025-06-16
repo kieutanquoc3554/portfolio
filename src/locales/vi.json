@@ -66,10 +66,10 @@
       "description": "Một website mua sắm full-stack cho đặc sản địa phương. Bao gồm đăng nhập, quản trị viên, thanh toán và chatbot.",
       "tech": ["React", "Node.js", "MongoDB"]
     },
-    "pos": {
-      "title": "POS Coffee (VNPT)",
-      "description": "Ứng dụng mô phỏng bán hàng được xây dựng trong quá trình thực tập. Bao gồm quản lý kho, luồng đơn hàng và giao diện người dùng.",
-      "tech": ["React", "Express", "MongoDB"]
+    "kimdung": {
+      "title": "Hệ thống quản lý vật liệu xây dựng - Kim Dung",
+      "description": "Một hệ thống quản lý cửa hàng bao gồm quản lý sản phẩm, kho, đơn hàng và giao diện admin responsive. Tập trung vào nội thất và vật liệu xây dựng.",
+      "tech": ["React", "Node.js", "MySQL"]
     }
   },
   "contact": {
