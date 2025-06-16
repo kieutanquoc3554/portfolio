@@ -90,5 +90,11 @@
       "label": "Portfolio",
       "value": "kieutanquoc.id.vn"
     }
+  },
+  "download": {
+    "title": "Download CV",
+    "content": "Choose your preferred language to download the CV.",
+    "option1": "Vietnamese CV",
+    "option2": "English CV"
   }
 }

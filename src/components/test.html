@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../components/test.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button
+      id="openModalBtn"
+      class="cursor-pointer bg-gradient-to-r from-rose-400 to-amber-400 text-white px-2 py-2 mx-4 my-2 rounded-full text-sm font-semibold hover:brightness-110 transition shadow"
+    >
+      Download CV
+    </button>
+    <div
+      id="cvModal"
+      class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center px-4 hidden"
+    >
+      <div
+        class="bg-[#1e293b]/90 text-white rounded-xl shadow-xl w-full max-w-md p-6 relative"
+      >
+        <button
+          id="closeModalBtn"
+          class="absolute top-4 right-4 text-gray-300 hover:text-white"
+        >
+          &times;
+        </button>
+        <h2 class="text-xl font-bold mb-4 text-center text-amber-400">
+          Download CV
+        </h2>
+        <p class="text-sm text-gray-300 mb-6 text-center">
+          Choose your preferred language to download the CV.
+        </p>
+        <div class="flex flex-col gap-4">
+          <a
+            href="assets/CV_VN_IMG.pdf"
+            download
+            class="flex items-center justify-center gap-2 bg-gradient-to-r from-rose-500 to-pink-400 text-white py-2 rounded-lg hover:brightness-110 transition"
+          >
+            📄 CV Tiếng Việt
+          </a>
+          <a
+            href="assets/CV_Eng_IMG.pdf"
+            download
+            class="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-400 text-white py-2 rounded-lg hover:brightness-110 transition"
+          >
+            📄 CV Tiếng Anh
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

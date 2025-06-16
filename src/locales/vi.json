@@ -90,5 +90,11 @@
       "label": "Trang cá nhân",
       "value": "kieutanquoc.id.vn"
     }
+  },
+  "download": {
+    "title": "Tải CV",
+    "content": "Chọn ngôn ngữ bạn muốn để tải CV.",
+    "option1": "CV Tiếng Việt",
+    "option2": "CV Tiếng Anh"
   }
 }
