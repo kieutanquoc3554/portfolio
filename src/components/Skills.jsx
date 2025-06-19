@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaReact, FaNodeJs, FaDatabase, FaCode, FaTools } from "react-icons/fa";
 
-const Skills = () => {
+const Skills = ({ id }) => {
   const [visible, setVisible] = useState(false);
   const { t } = useTranslation();
 
@@ -47,7 +47,7 @@ const Skills = () => {
 
   return (
     <section
-      id="skills"
+      id={id}
       className="w-full bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#1e3a5f] px-6 py-24"
     >
       <h2 className="text-4xl font-bold mb-16 text-amber-400 text-center tracking-wide">

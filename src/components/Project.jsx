@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { FaLaptopCode, FaStore } from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import CMU1 from "../assets/CMU1.png";
 import CMU2 from "../assets/CMU2.png";
@@ -8,7 +8,7 @@ import CMU3 from "../assets/CMU3.png";
 import CMU4 from "../assets/CMU4.png";
 import CMU5 from "../assets/CMU5.png";
 
-const Project = () => {
+const Project = ({ id }) => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [currentImages, setCurrentImages] = useState([]);
@@ -69,7 +69,7 @@ const Project = () => {
 
   return (
     <section
-      id="project"
+      id={id}
       className="w-full bg-gradient-to-tr from-[#0f172a] via-[#1e293b] to-[#1e3a5f] px-6 py-24"
     >
       <h2 className="text-4xl font-bold mb-14 text-amber-400 text-center tracking-wide">

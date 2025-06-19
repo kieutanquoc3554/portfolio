@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { FaUserGraduate, FaBriefcase, FaBullseye } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
-const About = () => {
+const About = ({ id }) => {
   const [visible, setVisible] = useState(false);
   const { t } = useTranslation();
 
@@ -18,7 +18,7 @@ const About = () => {
 
   return (
     <section
-      id="about"
+      id={id}
       className="w-full bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#1e3a5f] px-6 py-24"
     >
       <div className="max-w-4xl mx-auto transition-all duration-1000">

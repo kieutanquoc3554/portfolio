@@ -2,7 +2,7 @@ import { FaEnvelope, FaPhoneAlt, FaGithub, FaGlobe } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-const Information = () => {
+const Information = ({ id }) => {
   const [visible, setVisible] = useState(false);
   const { t } = useTranslation();
 
@@ -45,7 +45,7 @@ const Information = () => {
 
   return (
     <section
-      id="contact"
+      id={id}
       className="w-full bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#1e3a5f] px-6 py-24"
     >
       <h2 className="text-4xl font-bold mb-14 text-amber-400 text-center tracking-wide">

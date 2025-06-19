@@ -1,13 +1,24 @@
 import { useTranslation } from "react-i18next";
 import Flag from "react-world-flags";
 import { useState } from "react";
-import { FaBars } from "react-icons/fa";
+import {
+  FaBars,
+  FaHome,
+  FaUser,
+  FaGraduationCap,
+  FaTools,
+  FaProjectDiagram,
+  FaEnvelope,
+} from "react-icons/fa";
 import CVModal from "./CVModal";
 
-const Navbar = ({ onChange }) => {
+const Navbar = ({ onChange, selectedTab }) => {
   const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+
+  const isActive = (key) =>
+    selectedTab === key ? "text-rose-400 font-semibold" : "text-gray-200";
 
   const toggleLanguage = () => {
     const newLang = i18n.language === "vi" ? "en" : "vi";
@@ -16,7 +27,16 @@ const Navbar = ({ onChange }) => {
 
   const handleSelect = (section) => {
     onChange(section);
-    setMenuOpen(false); // đóng menu sau khi chọn
+    setMenuOpen(false);
+  };
+
+  const icons = {
+    home: <FaHome className="inline-block mr-2" />,
+    about: <FaUser className="inline-block mr-2" />,
+    education: <FaGraduationCap className="inline-block mr-2" />,
+    skills: <FaTools className="inline-block mr-2" />,
+    project: <FaProjectDiagram className="inline-block mr-2" />,
+    contact: <FaEnvelope className="inline-block mr-2" />,
   };
 
   return (
@@ -29,14 +49,19 @@ const Navbar = ({ onChange }) => {
           </h1>
 
           {/* Desktop menu */}
-          <ul className="hidden md:flex gap-6 text-base text-gray-200 font-medium tracking-wide">
+          <ul className="hidden md:flex gap-13 text-base font-medium tracking-wide">
             {["home", "about", "education", "skills", "project", "contact"].map(
               (key) => (
                 <li
                   key={key}
                   onClick={() => handleSelect(key)}
-                  className="cursor-pointer hover:text-rose-400 transition-colors duration-200"
+                  className={`cursor-pointer flex items-center transition-colors duration-200 ${
+                    selectedTab === key
+                      ? "text-rose-400 font-semibold"
+                      : "text-gray-200"
+                  }`}
                 >
+                  {icons[key]}
                   {t(`nav.${key}`)}
                 </li>
               )
@@ -81,8 +106,11 @@ const Navbar = ({ onChange }) => {
                 <div
                   key={key}
                   onClick={() => handleSelect(key)}
-                  className="cursor-pointer hover:text-rose-400 transition"
+                  className={`cursor-pointer flex items-center gap-2 hover:text-rose-400 transition ${
+                    selectedTab === key ? "text-rose-400 font-semibold" : ""
+                  }`}
                 >
+                  {icons[key]}
                   {t(`nav.${key}`)}
                 </div>
               )

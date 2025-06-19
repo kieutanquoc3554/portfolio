@@ -2,10 +2,10 @@ import Avatar from "./Avatar";
 import Contact from "./Contact";
 import Summary from "./Summary";
 
-const Introduce = () => {
+const Introduce = ({ id }) => {
   return (
     <section
-      id="home"
+      id={id}
       className="w-full bg-gradient-to-tr from-[#0f172a] via-[#1e293b] to-[#1e3a5f] px-6 py-24"
     >
       <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12">
