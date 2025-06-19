@@ -49,21 +49,21 @@ const Education = ({ id }) => {
             }`}
           >
             {/* Dot */}
-            <div className="absolute -left-[18px] top-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-[#1e293b] shadow-lg flex items-center justify-center">
-              <FaGraduationCap className="text-[10px] text-white" />
+            <div className="absolute -left-[18px] top-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-[#1e293b] shadow-xl animate-ping-slow flex items-center justify-center">
+              <FaGraduationCap className="text-[10px] text-white z-10" />
             </div>
 
             {/* Time */}
             <span className="text-base text-gray-400">{edu.time}</span>
 
             {/* Titles */}
-            <h3 className="text-2xl font-semibold text-white mt-1">
+            <h3 className="text-2xl font-bold text-white mt-1 tracking-wide group-hover:text-amber-400 transition-colors duration-300">
               {edu.title}
             </h3>
-            <h4 className="text-lg text-amber-300 mb-2">{edu.subtitle}</h4>
-
-            {/* Description */}
-            <p className="text-base text-slate-300 leading-relaxed">
+            <h4 className="text-lg italic text-cyan-300 mb-2 group-hover:text-white transition-colors duration-300">
+              {edu.subtitle}
+            </h4>
+            <p className="text-base text-slate-300 leading-relaxed group-hover:text-slate-200 transition duration-300">
               {edu.description}
             </p>
           </div>

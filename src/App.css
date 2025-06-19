@@ -1,3 +1,18 @@
 #root {
   font-family: "Rowdies", sans-serif;
 }
+
+@keyframes ping-slow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.6;
+  }
+}
+.animate-ping-slow {
+  animation: ping-slow 2.5s infinite;
+}
