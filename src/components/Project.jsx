@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { FaLaptopCode, FaStore } from "react-icons/fa";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import CMU1 from "../assets/CMU1.png";
 import CMU2 from "../assets/CMU2.png";
