@@ -1,8 +1,18 @@
 import { useTranslation } from "react-i18next";
 import { FaLaptopCode, FaStore } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import CMU1 from "../assets/CMU1.png";
+import CMU2 from "../assets/CMU2.png";
+import CMU3 from "../assets/CMU3.png";
+import CMU4 from "../assets/CMU4.png";
+import CMU5 from "../assets/CMU5.png";
 
 const Project = () => {
   const { t } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentImages, setCurrentImages] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const projects = [
     {
@@ -12,6 +22,13 @@ const Project = () => {
       icon: <FaStore className="text-cyan-400 text-2xl" />,
       live: "https://frontend-lvtn-66du.vercel.app",
       github: "https://github.com/kieutanquoc3554/frontendCM",
+      images: [
+        { src: CMU1, caption: "Giao diện trang chủ" },
+        { src: CMU2, caption: "Giao diện xem sản phẩm" },
+        { src: CMU3, caption: "Giao diện giỏ hàng" },
+        { src: CMU4, caption: "Giao diện giới thiệu đặc sản địa phương" },
+        { src: CMU5, caption: "Giao diện tìm kiếm sản phẩm" },
+      ],
     },
     {
       title: t("projects.kimdung.title"),
@@ -20,8 +37,35 @@ const Project = () => {
       icon: <FaLaptopCode className="text-pink-400 text-2xl" />,
       github: "https://github.com/kieutanquoc3554/frontendVLXD",
       live: "https://frontend-vlxd.vercel.app/",
+      images: ["/images/ecom1.png", "/images/ecom2.png", "/images/ecom3.png"],
     },
   ];
+
+  const openGallery = (images) => {
+    setCurrentImages(images);
+    setCurrentIndex(0);
+    setIsOpen(true);
+  };
+
+  const closeGallery = () => setIsOpen(false);
+
+  const nextImage = () =>
+    setCurrentIndex((prev) => (prev + 1) % currentImages.length);
+
+  const prevImage = () =>
+    setCurrentIndex((prev) =>
+      prev === 0 ? currentImages.length - 1 : prev - 1
+    );
+
+  useEffect(() => {
+    if (!isOpen || currentImages.length === 0) return;
+
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % currentImages.length);
+    }, 4000); // mỗi 4s
+
+    return () => clearInterval(timer);
+  }, [isOpen, currentImages]);
 
   return (
     <section
@@ -73,9 +117,67 @@ const Project = () => {
                 GitHub
               </a>
             </div>
+            <button
+              onClick={() => openGallery(p.images)}
+              className="text-sky-400 hover:text-white transition text-sm font-medium underline underline-offset-2"
+            >
+              {t("projects.viewImages", "Xem ảnh")}
+            </button>
           </div>
         ))}
       </div>
+      {isOpen && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="relative bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 w-[100%] max-w-3xl shadow-2xl"
+          >
+            <button
+              onClick={closeGallery}
+              className="absolute top-2 right-3 text-white text-2xl hover:text-red-400 transition cursor-pointer"
+            >
+              &times;
+            </button>
+
+            {/* Fade chuyển ảnh */}
+            <div className="relative w-full h-[320px] sm:h-[400px] overflow-hidden rounded-xl border border-white/10">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={currentImages[currentIndex].src}
+                  src={currentImages[currentIndex].src}
+                  alt={`Project image ${currentIndex + 1}`}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8 }}
+                />
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black/60 px-4 py-1 rounded text-white text-xs max-w-[90%] text-center">
+                  {currentImages[currentIndex]?.caption}
+                </div>
+              </AnimatePresence>
+            </div>
+
+            <div className="flex justify-between mt-4 text-white text-sm">
+              <button
+                onClick={prevImage}
+                className="hover:text-cyan-400 transition"
+              >
+                ← Trước
+              </button>
+              <button
+                onClick={nextImage}
+                className="hover:text-cyan-400 transition"
+              >
+                Sau →
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </section>
   );
 };
