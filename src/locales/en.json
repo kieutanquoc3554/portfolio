@@ -39,7 +39,7 @@
     "title": "Skills",
     "frontend": {
       "title": "Frontend",
-      "items": ["ReactJS", "Redux", "Tailwind CSS"]
+      "items": ["ReactJS", "Redux", "Tailwind CSS", "NextJS"]
     },
     "backend": {
       "title": "Backend",

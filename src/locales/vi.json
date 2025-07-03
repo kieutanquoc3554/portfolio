@@ -39,7 +39,7 @@
     "title": "Kỹ năng",
     "frontend": {
       "title": "Giao diện người dùng (Frontend)",
-      "items": ["ReactJS", "Redux", "Tailwind CSS"]
+      "items": ["ReactJS", "Redux", "Tailwind CSS", "NextJS"]
     },
     "backend": {
       "title": "Lập trình phía máy chủ (Backend)",
